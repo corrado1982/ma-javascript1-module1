@@ -68,14 +68,21 @@ let ageHtml = "";
 
 function createCats(cats) {
 
-    let nameHtml = "";
-    let ageHtml = "";
+    //let nameHtml = "";
+    //let ageHtml = "";
 
     for (let i = 0 ; i < cats.length; i++) {
-    nameHtml = cats[i].name;
-    ageHtml = cats[i].age;
-    //console.log(nameHtml);
+     nameHtml += "h4"+cats[i].name"h4";
+     ageHtml += cats[i].age;
+    
+     
+
+
+
     }
+    
 }
-createCats(cats);
+
+//console.log(createCats(cats));
 console.log(nameHtml);
+console.log(ageHtml);
