@@ -32,3 +32,50 @@ heading.innerHTML = "Updated heading";
 heading.style.fontSize = "2em";
 
 //Question 4
+
+heading.classList.add("subheading");
+
+//Question 5
+
+const paragraphs = document.querySelectorAll("p");
+
+for (let i = 0; i < paragraphs.length; i++) {
+    let loopParagraph = paragraphs[i];
+    console.log(loopParagraph);
+    loopParagraph.style.color = "red";
+}
+
+//Question 6
+
+const resultsContainer = document.querySelector(".results");
+const backgroundParagraph = "yellow";
+resultsContainer.innerHTML = `<p style ="background-color: ${backgroundParagraph}"> New paragraph </p>`;
+
+//Question 7
+
+function myFunction(list) {
+
+    for (let i = 0; i < list.length; i++) {
+        console.log(list[i].name);
+    }
+}
+myFunction(cats);
+
+//Question 8
+
+let nameHtml = "";
+let ageHtml = "";
+
+function createCats(cats) {
+
+    let nameHtml = "";
+    let ageHtml = "";
+
+    for (let i = 0 ; i < cats.length; i++) {
+    nameHtml = cats[i].name;
+    ageHtml = cats[i].age;
+    //console.log(nameHtml);
+    }
+}
+createCats(cats);
+console.log(nameHtml);
