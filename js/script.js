@@ -41,7 +41,7 @@ const paragraphs = document.querySelectorAll("p");
 
 for (let i = 0; i < paragraphs.length; i++) {
     let loopParagraph = paragraphs[i];
-    console.log(loopParagraph);
+    //console.log(loopParagraph);
     loopParagraph.style.color = "red";
 }
 
@@ -75,11 +75,10 @@ function createCats(cats) {
         age = "Age unknown";
     }  
 
-    objectHtml += "<div>" 
-    + "<h5>" + cats[i].name + "</h5>" +
-     "<p>" + age + "<p/>" + 
-     "</div>";
-    
+     objectHtml += `<div>
+                        <h5>${cats[i].name}</h5>
+                        <p>${age}<p/>
+                    </div>`;
 
     }
     return objectHtml;
