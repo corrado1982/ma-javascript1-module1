@@ -63,26 +63,29 @@ myFunction(cats);
 
 //Question 8
 
-let nameHtml = "";
-let ageHtml = "";
+let objectHtml = "";
 
 function createCats(cats) {
 
-    //let nameHtml = "";
-    //let ageHtml = "";
-
     for (let i = 0 ; i < cats.length; i++) {
-     nameHtml += "h4"+cats[i].name"h4";
-     ageHtml += cats[i].age;
+
+    let age = cats[i].age;
+
+    if (!age) {
+        age = "Age unknown";
+    }  
+
+    objectHtml += "<div>" 
+    + "<h5>" + cats[i].name + "</h5>" +
+     "<p>" + age + "<p/>" + 
+     "</div>";
     
-     
-
-
 
     }
-    
+    return objectHtml;
 }
+createCats(cats)
+console.log(objectHtml);
+let toHtmlCatContainer = document.querySelector(".cat-container");
 
-//console.log(createCats(cats));
-console.log(nameHtml);
-console.log(ageHtml);
+toHtmlCatContainer.innerHTML = objectHtml;
